@@ -21,9 +21,9 @@ public Results<MyClass> MyStuff()
 
 Typescript
 ```Javascript
-import { IResults } from './IResults';
+import { IResults, IResultsWithValue } from './IResults';
 const getMyStuff = () => {
-	fetch('api/stuff/5').Then(x => x.json()).Then((x: IResults<IMyStuff>) => {
+	fetch('api/stuff/5').Then(x => x.json()).Then((x: IResultsWithValue<IMyStuff>) => {
 		if (x.isSuccess) {
 			setMyStuff(x.value);
 		}
